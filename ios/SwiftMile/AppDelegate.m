@@ -9,6 +9,8 @@
 
 #import "AppDelegate.h"
 
+#import "AppHub.h"
+
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
@@ -18,6 +20,7 @@
 {
   NSURL *jsCodeLocation;
 
+  [AppHub setApplicationID:@"6b6Xsgxg5IDXkAmlGxgO"];
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
