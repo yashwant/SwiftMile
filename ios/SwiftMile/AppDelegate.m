@@ -23,6 +23,21 @@
   [AppHub setApplicationID:@"6b6Xsgxg5IDXkAmlGxgO"];
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
 
+  /**
+  * OPTION 3 - AppHub
+  *
+  * Load cached code and images from AppHub.
+  *
+  */
+  
+  AHBuild *build = [[AppHub buildManager] currentBuild];
+  jsCodeLocation = [build.bundle URLForResource:@"main"
+                                  withExtension:@"jsbundle"];
+
+  /**
+   * AppHub code change end
+   */
+  
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"SwiftMile"
                                                initialProperties:nil
